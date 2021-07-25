@@ -117,6 +117,9 @@ b = reduce((lambda x,y:x*y),R_list)
 
 print(f"gia tri {b}")
 '''
+class name:
+	def __init__(self,name):
+		self.name = name
 def greet(name = "Vu"):
 	
 	def hi():
@@ -124,10 +127,10 @@ def greet(name = "Vu"):
 	def welcome():	
 		return "inside function welcome()"
 	list = [hi,welcome]
-	if name == "Vu":
-		return welcome
-	else :
-		return hi
+	if self.number == 1:
+		return list[self.number]
+	else:
+		return list[self.number+1]
 
 x = greet("Vu")
 print(x())
