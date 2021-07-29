@@ -77,4 +77,59 @@ def sum4():
 		S = S+ 1/((2*i)+1)
 		i+=1
 	return S
-
+# Bài 6: Tính S(n) = 1/1×2 + 1/2×3 +…+ 1/n x (n + 1)
+def sum6():
+	n = int(input("nhap vao so n: \n"))
+	i = 1
+	S = 0;
+	while(i<=n):
+		S = S + 1/(n*(n+1))
+		i+=1
+	return round(float(S),9)
+# Bài 7: Tính S(n) = ½ + 2/3 + ¾ + …. + n / n + 1
+def sum7():
+	i = 1
+	S= 0
+	n = int(input("nhap vao so n: \n"))
+	while(i <= n ):
+		S = S + n/(n+1)
+		i+=1
+	return round(float(S),9)
+# Bài 10: Tính T(x, n) = x^n
+def b10():
+	x = int(input("nhap vao so x: \n"))
+	n = int(input("nhap vao so n: \n"))
+	print("gia tri cua ham T(x,n) la: ",x**n)
+# Bài 11: Tính S(n) = 1 + 1.2 + 1.2.3 + … + 1.2.3….N
+def b11(n):
+	# n=3 s(n)= 1 + 1*2 + 1*2*3
+	while n == 0 :
+		return 1
+	return b11(n-1)*(n-1)+n
+# Bài 12: Tính S(n) = x + x^2 + x^3 + … + x^n
+def b12(x,n):
+	i = 1
+	S = 0
+	while(i <= n ):
+		S = S + x**i
+		i +=1
+	return S
+# Bài 13: Tính S(n) = x^2 + x^4 + … + x^2n
+def b13(x,n):
+	i = 1
+	S = 0
+	while(i <= n ):
+		S = S + x**(2*i)
+		i +=1
+	return S
+# Bài 14: Tính S(n) = x + x^3 + x^5 + … + x^2n + 1
+def b14(x,n):
+	i = 1
+	S = x
+	while(i <= n ):
+		S = S + x**(2*i+1)
+		i +=1
+	return S
+#Bài 15: Tính S(n) = 1 + 1/1 + 2 + 1/ 1 + 2 + 3 + ….. + 1/ 1 + 2 + 3 + …. + N
+def b15():
+	
